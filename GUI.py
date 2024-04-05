@@ -67,20 +67,20 @@ def main():
 	    y = enc([x])[0][0]
 	cur_face = (y * 255.0).astype(np.uint8)
 	cur_face = cv2.rotate(cur_face.T, rotateCode = 0)
-	
+
 	with col3:
-	    st.image(cur_face, width=350)
-            im = Image.fromarray(cur_face.astype('uint8'), 'RGB')
+		st.image(cur_face, width=350)
+		im = Image.fromarray(cur_face.astype('uint8'), 'RGB')
  
-            buf = BytesIO()
-            im.save(buf, format="PNG")
-        
-            btn = st.download_button(
-                label="Download",
-                data=buf,
-                file_name="imagename.png",
-                mime="image/jpeg",
-            )
+	        buf = BytesIO()
+	        im.save(buf, format="PNG")
+	        
+	        btn = st.download_button(
+	            label="Download",
+	            data=buf,
+	            file_name="imagename.png",
+	            mime="image/jpeg",
+	        )
 
 if __name__ == '__main__':
 	main()
