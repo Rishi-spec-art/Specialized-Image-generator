@@ -71,15 +71,15 @@ def main():
 	with col3:
 		st.image(cur_face, width=350)
 		im = Image.fromarray(cur_face.astype('uint8'), 'RGB')
-		
-		buf = BytesIO()
-	        im.save(buf, format="PNG")
-		btn = st.download_button(
-			label="Download",
-			data=buf,
-			file_name="imagename.png",
-			mime="image/jpeg",
-		)
 
+		buf = BytesIO()
+		im.save(buf, format = 'PNG')
+		btn = st.download_button(
+			label = 'Download',
+			data = buf,
+			file_name = 'image.png',
+			mime = 'image/png'
+		)
+		
 if __name__ == '__main__':
 	main()
