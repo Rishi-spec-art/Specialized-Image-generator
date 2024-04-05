@@ -4,9 +4,7 @@
 .element-container{
     display: flex;
 }
-div .st-ae{
-    width: 9vw;
-}
+
 .stApp {
     background-color: rgb(255, 230, 207);
 }
@@ -28,4 +26,10 @@ img{
 img:hover{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: all 0.2s;
+}
+
+@media screen and (min-height:641px){
+    div .st-ae{
+        width: 20vh;
+    }
 }
