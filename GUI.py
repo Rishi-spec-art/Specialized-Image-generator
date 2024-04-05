@@ -5,6 +5,8 @@ from keras.models import load_model
 from keras import backend as K
 K.set_image_data_format('channels_first')
 from tensorflow.python.keras.backend import eager_learning_phase_scope
+from PIL import Image
+from io import BytesIO
 
 import streamlit as st
 
@@ -68,9 +70,17 @@ def main():
 	
 	with col3:
 	    st.image(cur_face, width=350)
-	    down = st.button("Download", help = "Click to download image")
-	    if down:
-	        cv2.imwrite("File_downloaded.png", cur_face)
+            im = Image.fromarray(cur_face.astype('uint8'), 'RGB')
+ 
+            buf = BytesIO()
+            im.save(buf, format="PNG")
+        
+            btn = st.download_button(
+                label="Download",
+                data=buf,
+                file_name="imagename.png",
+                mime="image/jpeg",
+            )
 
 if __name__ == '__main__':
 	main()
