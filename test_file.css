@@ -32,8 +32,8 @@ img:hover{
     transition: all 0.2s;
 }
 
-@media screen and (min-height:641px){
+@media screen and (max-height:100px){
     div .st-ae{
-        width: 20vh;
+        width: fit-content;
     }
 }
