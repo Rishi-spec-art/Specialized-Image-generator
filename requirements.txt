@@ -1,5 +1,5 @@
 streamlit 
-python 
+Python 
 numpy 
 opencv-python 
 tensorflow == 2.14.1
