@@ -1,0 +1,25 @@
+.stSlider{
+    background-color: rgb(211, 211, 211);
+}
+.element-container{
+    display: flex;
+}
+div .st-ae{
+    width: 9vw;
+}
+.stApp {
+    background-color: rgb(255, 230, 207);
+}
+.stTooltipIcon{
+    justify-content: center;
+}
+.st-emotion-cache-1kyxreq{
+    justify-content: center;
+}
+img{
+    border-radius: 20px;
+}
+img:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: all 0.2s;
+}
