@@ -1,3 +1,4 @@
+# Importing all the required libraries
 import cv2
 import numpy as np
 from keras.models import load_model
@@ -7,6 +8,7 @@ from tensorflow.python.keras.backend import eager_learning_phase_scope
 
 import streamlit as st
 
+#Loading the CSS file 
 with open('test_file.css') as f:
     css = f.read()
 
@@ -18,22 +20,25 @@ input_h = 124
 
 cur_face = np.zeros((3, input_h, input_w), dtype=np.uint8)
 
-enc_model = load_model("Model3\Encoder.h5")
-enc_fname = "Model3\Encoder.h5"
+enc_model = load_model("Encoder.h5")
+enc_fname = "Encoder.h5"
 
+#Loading the model
 enc_model = load_model(enc_fname)
 enc = K.function([enc_model.get_layer('encoder').input],
 				 [enc_model.layers[-1].output])
 
-means = np.load(file = "npy files3\means.npy")
-stds  = np.load('npy files3\stds.npy')
-evals = np.sqrt(np.load('npy files3\evals.npy'))
-evecs = np.load('npy files3\evecs.npy')
+#Loading all the stats
+means = np.load(file = "means.npy")
+stds  = np.load('stds.npy')
+evals = np.sqrt(np.load('evals.npy'))
+evecs = np.load('evecs.npy')
 
 sort_inds = np.argsort(-evals)
 evals = evals[sort_inds]
 evecs = evecs[:,sort_inds]
 
+#Starting point of App creation
 st.title("Human Face Generator")
 st.markdown("You can here *generate images* that may be used by you for different purposes, such as using in your _model_ training without any need for privacy considerations, etc.")
 
