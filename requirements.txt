@@ -1,5 +1,7 @@
 streamlit
 numpy 
+libgl1
+libglib2.0-0
 opencv-python-headless
 opencv-python 
 tensorflow == 2.14.1
