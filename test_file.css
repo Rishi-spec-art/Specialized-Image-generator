@@ -13,6 +13,12 @@ div .st-ae{
 .stTooltipIcon{
     justify-content: center;
 }
+
+.stDownloadButton{
+    justify-content: center;
+    display: grid;
+}
+
 .st-emotion-cache-1kyxreq{
     justify-content: center;
 }
