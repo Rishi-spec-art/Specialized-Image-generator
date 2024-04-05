@@ -42,8 +42,8 @@ evecs = evecs[:,sort_inds]
 
 #Starting point of App creation
 def main():
-	st.title("Human Face Generator")
-	st.markdown("You can here *generate images* that may be used by you for different purposes, such as using in your _model_ training without any need for privacy considerations, etc.")
+	st.title("Specialized Human-Face Generator")
+	st.markdown("You can here *generate specialized images* that may be used by you for different purposes, such as using in your _model_ training without any need for privacy considerations, etc.")
 	
 	col1, col2, col3= st.columns([1,1,3])
 	
