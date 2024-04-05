@@ -1,6 +1,6 @@
 
-streamlit == 1.31.1
-python >= 3.10.14
-numpy == 1.26.4
-opencv-python == 4.9.0.80
+streamlit 
+python 
+numpy 
+opencv-python 
 tensorflow == 2.14.1
